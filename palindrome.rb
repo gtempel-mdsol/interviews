@@ -12,6 +12,8 @@
 #     punctuation
 #     whitespace
 #     what about single letter words?
+#     is a single letter word a palindrome?
+#
 #   did the candidate think about performance?
 #     especially if the solution normalizes case on individual characters within 
 #       the loop of a manual solution
@@ -33,11 +35,19 @@ def palindrome_normalized? text
   text == text.reverse
 end
 
-# a possible manual solution
+# one possible manual solution
 def palindrome_manual_check? text
+  # watch to see if candidates consider any of the things that
+  # could cause problems, such as leading/trailing whitespace, 
+  # case, punctuation, etc.
   data = text.to_s.strip.downcase
   left = 0
+  # watch for candidates' off-by-one errors here
   right = data.length - 1
+  # do candidates use a fixed for loop that iterates
+  # halfway through the text? Do they handle odd vs
+  # even length text differently? Or they just check
+  # the left vs right indices?
   while left < right do
     return false if data[left] != data[right]
     left += 1
@@ -46,6 +56,7 @@ def palindrome_manual_check? text
   true
 end
 
+# sample text to test...feel free to add to this
 text = %w[
   a
   foo
@@ -64,18 +75,18 @@ advanced_text = text + [
   'A man, a plan, a canal. Panama',
   'Step on no pets',
   'Was it a car or a cat I saw?',
-  'or other sequence of characters',
+  'a sequence of characters that is not a palindrome?',
   'In girum imus nocte et consumimur igni'
 ]
 
 # compare results
 text.each do |t|
-  puts "standard: #{t} " + (palindrome_word?(t) ? 'IS ' : 'is not ') + 'a palindrome'
-  puts "manual: #{t} " + (palindrome_manual_check?(t) ? 'IS ' : 'is not ') + 'a palindrome'
+  puts "standard: " + (palindrome_word?(t) ? 'YES ' : 'no  ') + ": #{t}"
+  puts "manual:   " + (palindrome_manual_check?(t) ? 'YES ' : 'no  ')  + ": #{t}"
 end
 
 advanced_text.each do |t|
-  puts "#{t} " + (palindrome_normalized?(t) ? 'IS ' : 'is not ') + 'a palindrome'
+  puts (palindrome_normalized?(t) ? 'YES ' : 'no  ') + ": #{t}"
 end
 
 # benchmark for comparison of approaches
