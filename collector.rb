@@ -1,28 +1,30 @@
+# interview programming problem: collecting words, determining frequency
+#
 # ask for input from user (or stdin or whatever)
 # for every input received:
 #   if unique, keep it
 #   if non-unique, report non-unique
 #     bonus/extra: ...and how many times we've seen it
 #       bonus/extra: interactively or via batch? Good thinking
-
-
-# easy:
+#
+# easy approach:
 #   could simply collect everything, then detect duplicates and counts
 #
-# better:
+# better approach:
 #   use a hash or set, and detect/probe for existence, and increment a value
-
-# questions:
+#
+# follow-on questions for the candidate:
+#   did the candidate just do a method/function, or work-up a class?
 #   does case matter?
 #   removing 'common' words?
-
+#   phrases vs words?
+#   did the candidate talk about testing?
 
 require 'JSON'
 
-
 #==========
 
-# arbitrary collection of speeches
+# arbitrary collection of speeches that can be used as source text
 text = { }
 
 # Martin Luther King's "I Have A Dream" speech
@@ -77,6 +79,7 @@ and guarded by the British Fleet, would carry on the struggle, until, in Gods go
 the New World, with all its power and might, steps forth to the rescue and the liberation of the old.
 EOL
 
+# A possible class implementation here.
 class WordCollector
   
   COMMON = %w[
@@ -116,7 +119,7 @@ class WordCollector
 end
 
 # ==================
-# choose which speech to analyze
+# choose which speech to analyze...just pick one and comment out the others
 text_key = :mlk
 text_key = :gettysburg
 text_key = :churchill

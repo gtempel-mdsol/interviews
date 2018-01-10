@@ -1,3 +1,7 @@
+Just some questions that might be useful to ask at the start of an interview.
+
+
+
 For recent graduates or those with little professional experience:
 
 * most challenging CS course, and why?

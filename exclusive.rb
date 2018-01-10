@@ -1,9 +1,18 @@
+# programming interview problem: set operations
+#
 # find the divergent/exclusive set (items that appear in 1 and only 1 collection)
-
+#
 # can do this with arrays as well as sets
 # (a - b) | (b - a)
-
+#
 # order is O(n)
+#
+# questions to consider:
+#   does the candidate understand set-based operations?
+#   did the candidate reach for stdlib type functions or try a manual approach?
+#     is candidate aware of pros/cons of each?
+#
+# A possible implementation is below:
 
 require 'set'
 

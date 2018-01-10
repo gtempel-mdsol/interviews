@@ -1,8 +1,15 @@
+# interview programming problem: partition collection of numbers into odd and even collections
+#
 # write code that will take a collection of numbers and split it
 # into two collections, the odds and the evens
 #
 # could do this one at a time
 # could do this in bulk
+#
+# questions:
+#   does the candidate consider scale (size of the collection)
+#   does the candidate consider built-ins vs manual checks?
+#   is the candidate able to tell which might perform better and why? 
 
 require 'json'
 require 'benchmark'
