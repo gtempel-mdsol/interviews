@@ -36,3 +36,73 @@ Constructors allocate, initializers operate on ready-to-use objects
 
 
 
+* Tell me about yourself -- quick synopsis, not long winded
+
+
+* how do you go about learning and apply new knowledge quickly? What works for you?
+
+* what kinds of projects have you worked on?
+* what kinds of group projects?
+
+* how you explore what the code aught to be doing vs what it is doing?
+explore the tests ***
+debugging with breakpoints
+
+
+* know design patterns, SOLID, etc?
+
+* OOA vs procedure
+models
+objects (classes) represents just itself, and certain functionality
+use to represent the relationships between the models
+
+* knows selects
+* given customer/cakes/orders problem, asked to find all flavors that a customer has ordered
+
+
+
+
+
+That is the structure of a well written automated test:
+
+Setup - which loads the environment under test with a known set of data (can be data driven from a flat file or YAML/XML)
+
+Execution - in which a very tightly focused piece of functionality is tested
+
+Tear down - in which the environment is restored to it's initial state.
+
+
+3)  Behavioral testing ROCKS for ACCEPTANCE TESTS when it is part of the culture of your team.  Ask candidates if they have worked with BDD and WHO wrote the test stories.  At many organizations, they do it all wrong.  Testers write the Stories (requirements) and then write the tests that flow out of them (cough Comcast cough).
+
+The answer you want to hear is that the testers sit with dev and product 'owners' to work out the stories from the very start.  Then the testers code their tests in parallel with development.  When this works - it rocks.  Getting it to work is ... very tricky.
+
+4)  Ask the candidate if it is important for automated tests to be run in any order.  The answer is YES.
+
+
+
+
+* tech: design patterns—what are they? what are anti-patterns?
+
+* tech: design patterns — decorator vs inheritance
+I can solve the problem of adding functionality by adding sub classing then why should I use decorator pattern what's the real advantage of decorator pattern ?
+More flexibility than static inheritance. The Decorator pattern provides a more flexible way to add responsibilities to objects than can be had with static (multiple) inheritance. With decorators, responsibilities can be added and removed at run-time simply by attaching and detaching them. In contrast, inheritance requires creating a new class for each additional responsibility (e.g., BorderedScrollableTextView, BorderedTextView). This gives rise to many classes and increases the complexity of a system. Furthermore, providing different Decorator classes for a specific Component class lets you mix and match responsibilities.
+
+Decorators also make it easy to add a property twice. For example, to give a TextView a double border, simply attach two BorderDecorators. Inheriting from a Border class twice is error-prone at best.
+Avoids feature-laden classes high up in the hierarchy. Decorator offers a pay-as-you-go approach to adding responsibilities. Instead of trying to support all foreseeable features in a complex, customizable class, you can define a simple class and add functionality incrementally with Decorator objects. Functionality can be composed from simple pieces. As a result, an application needn't pay for features it doesn't use. It's also easy to define new kinds of Decorators independently from the classes of objects they extend, even for unforeseen extensions. Extending a complex class tends to expose details unrelated to the responsibilities you're adding.
+
+SOLID?
+Single responsibility
+open/closed (open for extension, closed for modification)
+liskov substitution (swap one for subclasses/subtypes)
+interface segregation (multiple specific instead of one uber)
+dependency inversion (depend upon abstractions, no conretions)
+
+
+W
+
+* What would you do during your first 90 days on this job?
+
+
+
+
+
