@@ -12,7 +12,35 @@ For recent graduates or those with little professional experience:
 
 
 
+For junior ruby developers:
+https://mdsol.jiveon.com/docs/DOC-7391
+
+
+
 For anyone:
+
+
+Architecture
+Worst coding practice you’ve seen?
+Give an example of code excellence.
+Systems
+Most challenging architecture / code to which you’ve been exposed?
+Describe what happened to make this picture (not photoshopped).
+Environment
+Describe great BDD, or TDD.
+Describe your preferred approach to version control, testing and code releases.
+Describe how you have configured your programming environment.
+Office
+In what form of work environment have you found yourself the most productive?
+What kind of workflow/behavior breaks your motivation the most?
+In what ways would an environment best support the growth you want in your career?
+Community
+Best blogs/sites/methods for keeping current.
+Describe a gem / service / etc that the community needs.
+Meta
+What kinds of topics did we not ask about that you were hoping would come up?
+
+
 
 * favorite language? explain?
 
@@ -47,6 +75,22 @@ Constructors allocate, initializers operate on ready-to-use objects
 * how you explore what the code aught to be doing vs what it is doing?
 explore the tests ***
 debugging with breakpoints
+
+
+
+Practices
+Worst coding practice you’ve seen?
+Give an example of code excellence.
+Most challenging architecture / code to which you’ve been exposed?
+In what form of work environment have you found yourself the most productive? What kind of workflow/behavior breaks your motivation the most?
+ 
+Describe great BDD or TDD.
+Describe your preferred approach to version control, testing and code releases.
+Describe how you have configured your programming environment.
+ 
+Best blogs/sites/methods for keeping current.
+Describe a gem / service / etc that the community needs.
+
 
 
 * know design patterns, SOLID, etc?
@@ -98,7 +142,7 @@ interface segregation (multiple specific instead of one uber)
 dependency inversion (depend upon abstractions, no conretions)
 
 
-W
+
 
 * What would you do during your first 90 days on this job?
 
