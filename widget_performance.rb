@@ -9,7 +9,7 @@ class Widget
   end
 end
 
-widgets = (1..100).select(&:even?).inject([]) { |collection, n| collection << Widget.new(id: n) }
+widgets = (1..1000).select(&:even?).inject([]) { |collection, n| collection << Widget.new(id: n) }
 
 
 # which is faster? how would you measure?
@@ -18,6 +18,7 @@ widget_ids = widgets.map(&:id)
 widget_ids = widgets.inject([]) { |a, w| a.push(w.id) }
 widget_ids = widgets.collect { |w| w.id }
 
+require 'benchmark'
 
 time = Benchmark.bmbm do |x|
   x.report('map of id') { widgets.map { |w| w.id } }
