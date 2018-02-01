@@ -19,7 +19,7 @@ https://mdsol.jiveon.com/docs/DOC-7391
 
 For anyone:
 
-
+from: https://mdsol.jiveon.com/docs/DOC-7393
 Architecture
 Worst coding practice you’ve seen?
 Give an example of code excellence.
