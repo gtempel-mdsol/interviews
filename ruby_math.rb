@@ -43,3 +43,26 @@ range.inject(0, &:+)
 # any of the above, but filter out or ignore those that don't have an integer square root
 range.select{|n| Math::sqrt(n) % 1 == 0}.sum # for ruby >= 2.4 otherwise must use one of the above
 range.select{|n| Math::sqrt(n) % 1 == 0}.inject(&:+)
+
+
+require 'benchmark'
+
+range = (5..26)
+total = 0
+benchmarks = Benchmark.bmbm do |x|
+  x.report('reduce') { range.reduce(:+) }
+  x.report('loop') { range.each { |n| total += n } }
+  x.report('inject symbol') { range.to_a.inject(&:+) }
+  x.report('inject value') { range.to_a.inject(0, &:+) }
+  x.report('range sum') { range.sum }
+  x.report('range inject symbol') { range.inject(&:+) }
+  x.report('range inject value') { range.inject(0, &:+) }
+}
+
+
+end
+
+# which was fastest?
+benchmarks.sort! { |a, b| a.real <=> b.real }
+puts "Results\n#{'-' * 30}"
+benchmarks.each { |a| puts "#{a.label.ljust(20)}: #{a.real} "}

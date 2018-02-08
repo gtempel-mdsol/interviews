@@ -4,6 +4,11 @@
 str = "hello world"   
 str["world"] = "moon"
 
+# what is the output?
+puts str
+
+
+# hello moon
 # the [] method on string allows for various indexing into the string, depending
 # upon the parameters
 # str[start, length], str[range] gives a substring or nil
